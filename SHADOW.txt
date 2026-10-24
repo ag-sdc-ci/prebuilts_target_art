@@ -1,0 +1,6 @@
+shadow prebuilt repo: art (target)
+  upstream: art
+  api-level: 34 (branch 34-20261025)
+  blobs: com.android.art.apex
+  payload: extracted flattened root payload (com.android.art.dev.apex extracted to root; include, lib64 static archives, root Android.bp; dev blob removed per Zero-Extractive-Blob policy)
+  date: 2026-10-25
