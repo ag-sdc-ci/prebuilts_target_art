@@ -276,3 +276,10 @@ java_sdk_library_import {
     },
     visibility: ["//visibility:public"],
 }
+
+java_import {
+    name: "service-art.stubs.system_server",
+    jars: ["share/art/service-art.jar"],
+    sdk_version: "system_server_current",
+    visibility: ["//visibility:public"],
+}
