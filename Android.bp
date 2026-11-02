@@ -15,6 +15,7 @@ prebuilt_apex {
         },
     },
     filename: "com.android.art.apex",
+    exported_bootclasspath_fragments: ["art-bootclasspath-fragment"],
     prefer: true,
     installable: true,
 }
@@ -251,4 +252,27 @@ cc_prebuilt_library_static {
         },
     },
     prefer: true,
+}
+
+// -----------------------------------------------------------------------------
+// Core Runtime Java API Libraries
+// -----------------------------------------------------------------------------
+
+java_sdk_library_import {
+    name: "art.module.public.api",
+    prefer: true,
+    shared_library: false,
+    public: {
+        jars: ["share/art/art-public.jar"],
+        sdk_version: "none",
+    },
+    system: {
+        jars: ["share/art/art-system.jar"],
+        sdk_version: "none",
+    },
+    module_lib: {
+        jars: ["share/art/art-module-lib.jar"],
+        sdk_version: "none",
+    },
+    visibility: ["//visibility:public"],
 }
