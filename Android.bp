@@ -280,7 +280,32 @@ java_sdk_library_import {
 java_import {
     name: "service-art.stubs.system_server",
     jars: ["share/art/service-art.jar"],
+    prefer: true,
     sdk_version: "system_server_current",
+    visibility: ["//visibility:public"],
+}
+
+java_import {
+    name: "service-art",
+    jars: ["share/art/service-art.jar"],
+    prefer: true,
+    sdk_version: "system_server_current",
+    visibility: ["//visibility:public"],
+}
+
+java_import {
+    name: "art.module.public.api.stubs.module_lib",
+    jars: ["share/art/art-module-lib.jar"],
+    prefer: true,
+    sdk_version: "none",
+    visibility: ["//visibility:public"],
+}
+
+java_import {
+    name: "art.module.public.api.stubs",
+    jars: ["share/art/art-module-lib.jar"],
+    prefer: true,
+    sdk_version: "none",
     visibility: ["//visibility:public"],
 }
 
@@ -288,6 +313,7 @@ java_import {
     name: "art.module.api.annotations",
     jars: ["share/art/art.module.api.annotations.jar"],
     host_supported: true,
+    prefer: true,
     sdk_version: "core_platform",
     visibility: ["//visibility:public"],
 }
